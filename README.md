@@ -14,8 +14,6 @@ Notícias Locais: O site serve como uma plataforma de notícias atualizada sobre
 
 Indicador de Locais Interessantes: Funciona como um guia turístico interativo, destacando pontos turísticos, restaurantes, atrações culturais e outros locais de interesse na cidade. Os usuários podem explorar uma lista completa de atrações com descrições detalhadas e informações úteis.
 
-Mapa Interativo: O site inclui um mapa interativo, onde os usuários podem localizar facilmente os pontos turísticos e outras atrações de Campinas. Esse mapa permite que os visitantes naveguem pela cidade de maneira prática e descubram as melhores rotas e distâncias entre os locais de interesse.
-
 Sistema de Avaliação: Os usuários podem avaliar os locais turísticos, proporcionando feedback sobre a qualidade das atrações e ajudando outros visitantes a tomar decisões mais informadas. Este sistema de avaliação facilita a escolha de atividades e pontos turísticos populares ou recomendados por outros usuários.
 
 Recomendações Personalizadas: O site oferece um sistema de recomendações baseado nas avaliações e nos locais visitados pelos usuários. A plataforma sugere novas atrações e atividades com base nos gostos pessoais de cada visitante, criando uma experiência de navegação mais personalizada.
