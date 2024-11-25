@@ -1,0 +1,307 @@
+@charset "UTF-8";
+body {
+  color: #333;
+  font-family: Tahoma;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 38px;
+  color: black;
+}
+
+p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.corpo {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 28px;
+  font-family: Tahoma;
+  color: black;
+}
+
+nav {
+  background-color: #003cac;
+}
+nav .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav .menu li {
+  position: relative;
+  padding: 15px 20px;
+}
+nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+nav .menu li:hover {
+  background-color: #444;
+}
+nav .menu li:hover .submenu {
+  display: block;
+}
+nav .menu li .submenu {
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  display: none;
+}
+nav .menu li .submenu li {
+  padding: 10px 20px;
+}
+nav .menu li .submenu li a {
+  color: #fff;
+}
+nav .menu li .submenu li a:hover {
+  background-color: #444;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.conteiner .formulario-registro {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+.conteiner .formulario-registro h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.conteiner .formulario-registro label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+  text-align: center;
+}
+.conteiner .formulario-registro input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.conteiner .formulario-registro input:focus {
+  outline: none;
+  border-color: #003cac;
+}
+.conteiner .formulario-registro button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #003cac;
+  margin-top: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.conteiner .formulario-registro button:hover {
+  background-color: #444;
+}
+
+.noticia {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.noticia img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+.noticia h2 {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+}
+.noticia a {
+  text-decoration: none;
+  color: #003cac;
+}
+.noticia a:hover {
+  color: #444;
+}
+
+.noticia.destaque {
+  padding: 20px; /* Adiciona mais espaçamento interno */
+  margin-bottom: 30px; /* Aumenta o espaçamento abaixo da notícia */
+  background-color: #e9ecef; /* Cor de fundo mais clara para destacar */
+  border: 2px solid #003cac; /* Borda para destaque */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+h2 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .conteiner {
+    padding: 10px;
+  }
+  .formulario-registro {
+    max-width: 100%;
+  }
+  .noticia {
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+  }
+}
+.caixa-historia {
+  position: relative;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.caixa-historia::before {
+  content: "";
+  background-image: url("../Imagens/Pag_inicial/campinas-sp.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+.caixa-historia p {
+  color: black;
+}
+
+.lista-parques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.lista-parques li {
+  margin: 15px;
+  text-align: center;
+}
+.lista-parques li img {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.lista-parques li a {
+  display: block;
+  margin-top: 10px;
+  color: #003cac;
+  text-decoration: none;
+}
+.lista-parques li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container .corpo {
+  text-align: center;
+}
+.container .formulario-registro h2 {
+  text-align: center;
+  color: black;
+}
+.container .formulario-registro label {
+  display: block;
+  margin: 10px 0 5px;
+}
+.container .formulario-registro input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.container .formulario-registro button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .formulario-registro button:hover {
+  background-color: #0056b3;
+}
+/* Estilo padrão para desktops */
+.logo {
+  width: 25%;
+  height: auto;
+  margin: 0 auto;
+  display: block; /* Centraliza horizontalmente */
+}
+
+/* Ajustes para mobile*/
+@media (max-width: 768px) {
+  .logo {
+      width: 50%;
+  }
+}
+
+/* Para telas muito pequenas (opcional) */
+@media (max-width: 480px) {
+  .logo {
+      width: 70%;
+  }
+}
