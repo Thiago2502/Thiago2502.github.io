@@ -7,50 +7,76 @@
     <title>Início</title>
 </head>
 <body>
-    <header>
+    <h1>
         <div class="logo-container">
             <img src="Arquivos_do_Site/Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html">Destinos</a></li>
-                <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html">Sobre</a></li>
-                <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html">Contato</a></li>
-                <li><a href="Arquivos_do_Site/Sites_internos/Registro/Publique.html">Publique</a></li>
-            </ul>
-        </nav>
-    </header>
+    </h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html">Destinos</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html">Sobre</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html">Contato</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Registro/Publique.html">Publique</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <section class="intro">
-            <p class="corpo">
-                Bem-vindo ao Rota Campinas, aqui você irá encontrar todos os melhores lugares de Campinas e região.
+    <div class="conteiner">
+        <p class="corpo">
+            Bem-vindo ao Rota Campinas, aqui você irá encontrar todos os melhores lugares de Campinas e região.
+        </p>
+
+        <!-- Seção História -->
+        <div class="caixa-historia">
+            <p class="corpo-historia">
+                Campinas, localizada no interior do estado de São Paulo, teve sua origem no século XVIII, por volta de 1774, 
+                quando a região era conhecida pelas vastas áreas de campos naturais, chamadas de "campinas". Antes da fundação oficial, 
+                a região era habitada por povos indígenas e percorrida por bandeirantes em busca de ouro e de rotas para o interior do Brasil.
+                A cidade começou a se desenvolver como um ponto de apoio para tropeiros que transportavam mercadorias entre São Paulo e Goiás. 
+                Com a construção de um pequeno povoado, chamado inicialmente de "Freguesia de Nossa Senhora da Conceição das Campinas do Mato Grosso", 
+                Campinas começou a ganhar relevância regional...
+                Ficou curioso a respeito da cidade? Saiba mais sobre em <a href="https://www.campinas.sp.gov.br/pagina/origens-37679">Prefeitura Municipal de Campinas</a>.
             </p>
-            <div class="caixa-historia">
-                <p class="corpo-historia">
-                   Campinas, localizada no interior do estado de São Paulo, teve sua origem no século XVIII, por volta de 1774, 
-                   quando a região era conhecida pelas vastas áreas de campos naturais, chamadas de "campinas". Antes da fundação oficial, 
-                   a região era habitada por povos indígenas e percorrida por bandeirantes em busca de ouro e de rotas para o interior do Brasil.
-                   A cidade começou a se desenvolver como um ponto de apoio para tropeiros que transportavam mercadorias entre São Paulo e Goiás. 
-                   Com a construção de um pequeno povoado, chamado inicialmente de "Freguesia de Nossa Senhora da Conceição das Campinas do Mato Grosso", 
-                   Campinas começou a ganhar relevância regional...<br> 
-                   Ficou curioso a respeito da cidade? Saiba mais sobre ela em <a href="https://www.campinas.sp.gov.br/pagina/origens-37679">Prefeitura Municipal de Campinas</a>.
-                </p>
-            </div>
-            <footer>
-                <p class="corpo">Deseja receber atualizações sobre a cidade antes que todo mundo? Então <a href="Arquivos_do_Site/Sites_internos/Registro/Registro.html">assine já!!</a> o Rota Campinas.</p>
-            </footer>
-        </section>
+        </div>
 
-        <section class="noticias">
-            <h2>Últimas Notícias</h2>
-            <!-- Container onde as notícias publicadas aparecerão -->
-            <div id="noticiasIndex"></div>
-                <p>Carregando as notícias...</p>
-            </div>
+        <!-- Seção de Notícias -->
+        <h3>Notícias Publicadas</h3>
+        <section class="noticias" id="noticias">
+            <!-- As notícias publicadas serão exibidas aqui -->
         </section>
-    </main>
-    <script src="Arquivos_do_Site/Sites_internos/Registro/script.js"></script>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const noticiasContainer = document.getElementById('noticias');
+
+            // Função para renderizar as notícias
+            function renderizarNoticias() {
+                const noticias = JSON.parse(localStorage.getItem('noticias')) || [];
+                noticiasContainer.innerHTML = ''; // Limpa o container antes de renderizar
+
+                if (noticias.length === 0) {
+                    noticiasContainer.innerHTML = '<p>Não há notícias publicadas ainda.</p>';
+                    return;
+                }
+
+                noticias.forEach((noticia) => {
+                    const noticiaDiv = document.createElement('div');
+                    noticiaDiv.classList.add('noticia');
+                    noticiaDiv.innerHTML = `
+                        <h4>${noticia.titulo}</h4>
+                        <p><strong>Autor:</strong> ${noticia.autor}</p>
+                        <p><strong>Data:</strong> ${new Date(noticia.data).toLocaleDateString()}</p>
+                        <p>${noticia.resumo}</p>
+                    `;
+                    noticiasContainer.appendChild(noticiaDiv);
+                });
+            }
+
+            // Renderiza as notícias ao carregar a página
+            renderizarNoticias();
+        });
+    </script>
 </body>
 </html>
