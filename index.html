@@ -14,11 +14,11 @@
     </h1>
     <nav>
         <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html">Destinos</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html">Sobre</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html">Contato</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Registro/Publique.html">Publique</a></li>
+            <li><a href="index.html" onclick="navigate('home')">Início</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html" onclick="navigate('destinos')">Destinos</a>
+            <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html" onclick="navigate('sobre')">Sobre</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html" onclick="navigate('contato')">Contato</a></li>
+            <li><a href="Arquivos_do_Site/Sites_internos/Registro/Publique.html" onclick="navigate('Publique')">Publique</a></li>
         </ul>
     </nav>
 
@@ -78,5 +78,15 @@
             renderizarNoticias();
         });
     </script>
+            <script>
+                function navigate(page) {
+                    const pages = document.querySelectorAll('.page');
+                    pages.forEach((pageDiv) => {
+                        pageDiv.style.display = 'none';
+                    });
+                    const selectedPage = document.getElementById(page);
+                    selectedPage.style.display = 'block';
+                }
+                </script>
 </body>
 </html>

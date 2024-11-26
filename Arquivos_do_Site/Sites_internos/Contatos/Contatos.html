@@ -12,15 +12,15 @@
         <img src="../../Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
         </div>
     </h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="../../../index.html">Início</a></li>
-                <li><a href="../Destinos/Destinos.html">Destinos</a></li>
-                <li><a href="../Sobre/Sobre.html">Sobre</a></li>
-                <li><a href="../Contatos/Contatos.html">Contato</a></li>
-                <li><a href="../Registro/Publique.html">Publique</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../../index.html" onclick="navigate('home')">Início</a></li>
+            <li><a href="../Destinos/Destinos.html" onclick="navigate('destinos')">Destinos</a>
+            <li><a href="../Sobre/Sobre.html" onclick="navigate('sobre')">Sobre</a></li>
+            <li><a href="Contatos.html" onclick="navigate('contato')">Contato</a></li>
+            <li><a href="../Registro/Publique.html" onclick="navigate('Publique')">Publique</a></li>
+        </ul>
+    </nav>
 <br>
     <div class="conteiner">
         <div class="formulario-registro">
@@ -30,6 +30,15 @@
             Tell:<br><br>
             (19)9776-6745</P>
     </div>
-    
+    <script>
+        function navigate(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach((pageDiv) => {
+                pageDiv.style.display = 'none';
+            });
+            const selectedPage = document.getElementById(page);
+            selectedPage.style.display = 'block';
+        }
+        </script>
 </body>
 </html>
