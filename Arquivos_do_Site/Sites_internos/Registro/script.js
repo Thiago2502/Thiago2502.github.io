@@ -50,17 +50,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Função para salvar ou atualizar notícia
+    // Função para salvar ou atualizar notícia localmente e enviar para o backend
     function salvarNoticia(noticia) {
         const noticias = JSON.parse(localStorage.getItem('noticias')) || [];
-        // Verifica se a notícia já existe (por ID)
         const index = noticias.findIndex(n => n.id === noticia.id);
+        
         if (index === -1) {
             noticias.push(noticia); // Adiciona nova notícia
         } else {
             noticias[index] = noticia; // Atualiza notícia existente
         }
+        
+        // Salva as notícias no localStorage
         localStorage.setItem('noticias', JSON.stringify(noticias));
+
+        // Envia a notícia para o backend
+        enviarNoticiaParaBackend(noticia);
+    }
+
+    // Função para enviar a notícia para o backend via Fetch
+    function enviarNoticiaParaBackend(noticia) {
+        const url = 'http://localhost:3000/api/noticias'; // URL do backend local
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(noticia),
+        })
+        .then(response => response.json()) // Espera pela resposta do servidor
+        .then(data => {
+            console.log('Notícia publicada com sucesso:', data);
+            alert('Notícia publicada com sucesso!');
+        })
+        .catch(error => {
+            console.error('Erro ao publicar a notícia:', error);
+            alert('Erro ao publicar a notícia. Tente novamente.');
+        });
     }
 
     // Função para excluir notícia
@@ -107,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Evento de envio do formulário para adicionar uma notícia
+    // Evento de envio do formulário para adicionar ou atualizar uma notícia
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
