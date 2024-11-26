@@ -26,14 +26,18 @@
         <div class="formulario-login">
             <h2>Formulário de Login</h2>
             <form action="/login" method="POST">
+                <div class="erro-login" style="color: red; display: none;">
+                    Email ou senha incorretos.
+                </div>
                 <label for="email">Email: <span style="color: red;">*</span></label>
                 <input type="email" id="email" name="email" required placeholder="Digite seu email"><br>
-
+            
                 <label for="senha">Senha: <span style="color: red;">*</span></label>
                 <input type="password" id="senha" name="senha" required placeholder="Digite sua senha"><br>
-
+            
                 <button type="submit">Entrar</button>
             </form>
+            
             <div class="assinatura-container">
                 <p class="corpo">Registre-se <a href="Registro.html">aqui!!</a></p>
             </div>
