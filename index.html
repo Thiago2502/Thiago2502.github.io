@@ -4,88 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Arquivos_do_Site/CSS/Camp.css">
-    <title>Inicio</title>
+    <title>Início</title>
 </head>
 <body>
-    <h1>
+    <header>
         <div class="logo-container">
             <img src="Arquivos_do_Site/Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
         </div>
-    </h1>
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html">Destinos</a>
-            <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html">Sobre</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html">Contato</a></li>
-            <li><a href="Arquivos_do_Site/Sites_internos/Registro/Login.html">Login</a></li>
-        </ul>
-    </nav><br>
-        <div class="conteiner">
-            <P class="corpo">
-                Bem-vindo ao Rota Campinas, aqui você irá encontras todos os melhores lugares de Campinas e região.
-            </P>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="Arquivos_do_Site/Sites_internos/Destinos/Destinos.html">Destinos</a></li>
+                <li><a href="Arquivos_do_Site/Sites_internos/Sobre/Sobre.html">Sobre</a></li>
+                <li><a href="Arquivos_do_Site/Sites_internos/Contatos/Contatos.html">Contato</a></li>
+                <li><a href="Arquivos_do_Site/Sites_internos/Registro/Publique.html">Publique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="corpo">
+                Bem-vindo ao Rota Campinas, aqui você irá encontrar todos os melhores lugares de Campinas e região.
+            </p>
             <div class="caixa-historia">
                 <p class="corpo-historia">
                    Campinas, localizada no interior do estado de São Paulo, teve sua origem no século XVIII, por volta de 1774, 
-                    quando a região era conhecida pelas vastas áreas de campos naturais, chamadas de "campinas". Antes da fundação oficial, 
-                    a região era habitada por povos indígenas e percorrida por bandeirantes em busca de ouro e de rotas para o interior do Brasil.
-                    A cidade começou a se desenvolver como um ponto de apoio para tropeiros que transportavam mercadorias entre São Paulo e Goiás. 
-                    Com a construção de um pequeno povoado, chamado inicialmente de "Freguesia de Nossa Senhora da Conceição das Campinas do Mato Grosso", 
-                    Campinas começou a ganhar relevância regional...<br> 
-                    Ficou curioso a respeito da cidade saiba mais sobre em <a href="https://www.campinas.sp.gov.br/pagina/origens-37679">Prefeitura Municipal de Campinas</a>.
+                   quando a região era conhecida pelas vastas áreas de campos naturais, chamadas de "campinas". Antes da fundação oficial, 
+                   a região era habitada por povos indígenas e percorrida por bandeirantes em busca de ouro e de rotas para o interior do Brasil.
+                   A cidade começou a se desenvolver como um ponto de apoio para tropeiros que transportavam mercadorias entre São Paulo e Goiás. 
+                   Com a construção de um pequeno povoado, chamado inicialmente de "Freguesia de Nossa Senhora da Conceição das Campinas do Mato Grosso", 
+                   Campinas começou a ganhar relevância regional...<br> 
+                   Ficou curioso a respeito da cidade? Saiba mais sobre ela em <a href="https://www.campinas.sp.gov.br/pagina/origens-37679">Prefeitura Municipal de Campinas</a>.
                 </p>
             </div>
-            <div class="assinatura-container">
+            <footer>
                 <p class="corpo">Deseja receber atualizações sobre a cidade antes que todo mundo? Então <a href="Arquivos_do_Site/Sites_internos/Registro/Registro.html">assine já!!</a> o Rota Campinas.</p>
+            </footer>
+        </section>
+
+        <section class="noticias">
+            <h2>Últimas Notícias</h2>
+            <!-- Container onde as notícias publicadas aparecerão -->
+            <div id="noticiasIndex"></div>
+                <p>Carregando as notícias...</p>
             </div>
-            <section class="noticias">
-                <article class="noticia destaque">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia destaque">
-                    <h2>Notícia em Destaque</h2><br>
-                    <a href="#">Resumo da notícia em destaque. Esta é uma descrição mais detalhada da notícia em destaque...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 1">
-                    <h2>Notícia 1</h2><br>
-                    <a href="#">Resumo da notícia 1. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 2">
-                    <h2>Notícia 2</h2><br>
-                    <a href="#">Resumo da notícia 2. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 3">
-                    <h2>Notícia 3</h2><br>
-                    <a href="#">Resumo da notícia 3. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 4">
-                    <h2>Notícia 4</h2><br>
-                    <a href="#">Resumo da notícia 4. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 5">
-                    <h2>Notícia 5</h2><br>
-                    <a href="#">Resumo da notícia 5. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-                <article class="noticia">
-                    <img src="Arquivos_do_Site/Imagens/Pag_inicial/sem-imagem.png" alt="notícia 6">
-                    <h2>Notícia 6</h2><br>
-                    <a href="#">Resumo da notícia 6. Esta é uma breve descrição da notícia...Leia mais</a>
-                </article>
-            </section>
-        </div>
-        <script>
-            function navigate(page) {
-                const pages = document.querySelectorAll('.page');
-                pages.forEach((pageDiv) => {
-                    pageDiv.style.display = 'none';
-                });
-                const selectedPage = document.getElementById(page);
-                selectedPage.style.display = 'block';
-            }
-            </script>
+        </section>
+    </main>
+    <script src="Arquivos_do_Site/Sites_internos/Registro/script.js"></script>
 </body>
 </html>

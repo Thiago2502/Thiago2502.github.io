@@ -18,54 +18,31 @@
             <li><a href="../Destinos/Destinos.html">Destinos</a></li>
             <li><a href="../Sobre/Sobre.html">Sobre</a></li>
             <li><a href="../Contatos/Contatos.html">Contato</a></li>
-            <li><a href="../Registro/Login.html">Login</a></li>
+            <li><a href="../Registro/Publique.html">Publique</a></li>
         </ul>
     </nav>
+    <section>
+        <h3>Parques em Campinas</h3>
+        <ul class="lista-parques">
+            <li>
+                <img src="../../Imagens/Pag_inicial/parque-do-taquaral-parque.jpg" alt="Parque Portugal" width="300px">
+                <a href="https://www.instagram.com/lagoadotaquaraloficial/?mibextid=Zxz2cZ" target="_blank">Parque Portugal (Lagoa do Taquaral)</a>
+            </li>
+            <li>
+                <img src="../../Imagens/Pag_inicial/66784750_666642090414044_8229070821314789376_n-800x500.jpg" alt="Bosque dos Jequitibás" width="300px">
+                <a href="https://www.instagram.com/zoocampinas/?hl=pt" target="_blank">Bosque dos Jequitibás</a>
+            </li>
+            <li>
+                <img src="../../Imagens/Pag_inicial/Parque-na-Avenida-das-Amoreiras.jpg" alt="Parque Linear José Mingone" width="300px">
+                <a href="https://www.fjposantagenebra.sp.gov.br/parque-linear-jose-mingone" target="_blank">Parque Mingone</a>
+            </li>
+            <li>
+                <img src="../../Imagens/Pag_inicial/portalcbncampinas.com.br-prefeitura-abre-concorrencia-para-projeto-do-parque-ecologico-parque-ecologico.jpg" alt="Parque Ecológico de Campinas" width="300px">
+                <a href="https://conheca.campinas.sp.gov.br/pois/791" target="_blank">Parque Ecológico de Campinas</a>
+            </li>
+        </ul>
+    </section>
 
-    <div class="container">
-        <div class="destinos-lista">
-            <h2>Destinos Cadastrados</h2>
-            <ul id="destinos-lista">
-                <!-- Destinos serão carregados aqui -->
-            </ul>
-        </div>
 
-        <!-- Formulário para adicionar novos lugares -->
-        <div class="formulario-destino">
-            <h2>Adicionar Novo Destino</h2>
-            <form action="/adicionar-lugar" method="POST">
-                <label for="nome">Nome do Destino:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do destino"><br>
-
-                <label for="descricao">Descrição:</label>
-                <textarea id="descricao" name="descricao" required placeholder="Descrição do destino"></textarea><br>
-
-                <label for="avaliacao">Avaliação (1 a 5):</label>
-                <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" required><br>
-
-                <button type="submit">Adicionar Destino</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Função para carregar os destinos no frontend
-        fetch('/destinos')
-            .then(response => response.json())
-            .then(destinos => {
-                const listaDestinos = document.getElementById('destinos-lista');
-                destinos.forEach(destino => {
-                    const item = document.createElement('li');
-                    item.innerHTML = `
-                        <strong>${destino.nome}</strong> <br>
-                        ${destino.descricao} <br>
-                        Avaliação: ${destino.avaliacao} <br>
-                        Criado em: ${destino.criado_em} <br><br>
-                    `;
-                    listaDestinos.appendChild(item);
-                });
-            })
-            .catch(error => console.error('Erro ao carregar destinos:', error));
-    </script>
 </body>
 </html>

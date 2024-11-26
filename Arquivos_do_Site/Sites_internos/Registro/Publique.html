@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Camp.css">
+    <title>Publicar Notícia</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../../Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="../../../index.html">Início</a></li>
+                <li><a href="../Destinos/Destinos.html">Destinos</a></li>
+                <li><a href="../Sobre/Sobre.html">Sobre</a></li>
+                <li><a href="../Contatos/Contatos.html">Contato</a></li>
+                <li><a href="Publique.html">Publique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Publicar uma Notícia</h2>
+        <form id="formNoticia">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required placeholder="Digite o título"><br>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" required placeholder="Digite o autor"><br>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required><br>
+
+            <label for="resumo">Resumo:</label>
+            <textarea id="resumo" name="resumo" required placeholder="Escreva um breve resumo"></textarea><br>
+
+            <label for="conteudo">Conteúdo:</label>
+            <textarea id="conteudo" name="conteudo" required placeholder="Escreva o conteúdo da notícia"></textarea><br>
+
+            <button type="submit">Publicar</button>
+        </form>
+
+        <h3>Notícias Publicadas</h3>
+        <div id="noticias"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
