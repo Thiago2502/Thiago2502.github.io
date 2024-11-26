@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const sqlite3 = require('sqlite3').verbose();
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const port = 3000;
@@ -20,15 +21,16 @@ app.use(session({
 
 // Verificação de login do usuário
 app.use((req, res, next) => {
-    if (!req.session.userId && req.url !== '/login') {
+    if (!req.session.userId && req.url !== '/login' && req.url !== '/registro') {
         return res.redirect('/login');
     }
     next();
 });
 
-// Rota para login (não registrada no banco para simplificação)
+// Rota para login
+// Rota para login
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/public/Login/Login.html');
+    res.sendFile(__dirname + '\\Arquivos_do_Site\\Sites_Internos\\Registro\\Login.html');
 });
 
 app.post('/login', (req, res) => {
@@ -49,7 +51,7 @@ app.post('/login', (req, res) => {
 
 // Rota para a página de registro
 app.get('/registro', (req, res) => {
-    res.sendFile(__dirname + '/public/Login/Registro.html');
+    res.sendFile(path.join(__dirname, 'Arquivos_do_Site', 'Sites_Internos', 'Registro', 'Registro.html'));
 });
 
 app.post('/registro', (req, res) => {
