@@ -7,7 +7,7 @@
     <title>Registro</title>
 </head>
 <body>
-    <h1>        
+    <h1>
         <div class="logo-container">
             <img src="../../Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
         </div>
@@ -15,56 +15,45 @@
     <nav>
         <ul class="menu">
             <li><a href="../../../index.html">Início</a></li>
-            <li><a href="#">Destinos</a>
-                <ul class="submenu">
-                    <li><a href="../Destinos/Parques.html">Parques</a></li>
-                    <li><a href="#">Museus</a></li>
-                    <li><a href="#">Restaurantes</a></li>
-                </ul>
-            </li>
+            <li><a href="../Destinos/Destinos.html">Destinos</a></li>
             <li><a href="../Sobre/Sobre.html">Sobre</a></li>
             <li><a href="../Contatos/Contatos.html">Contato</a></li>
+            <li><a href="Login.html">Login</a></li>
         </ul>
     </nav>
+
     <div class="container">
         <div class="formulario-registro">
             <h2>Formulário de Registro</h2>
-            <form action="R_confirmed.html" method="GET">
+            <form action="http://localhost:3000/registro" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"><br>
                 <label for="email">Email: <span style="color: red;">*</span></label>
                 <input type="email" id="email" name="email" required placeholder="Digite seu email"><br>
-                <label for="confirmar-email">Confirmar Email: <span style="color: red;">*</span></label>
-                <input type="email" id="confirmar-email" name="confirmar-email" required placeholder="Confirme seu email"><br>
                 <label for="senha">Senha: <span style="color: red;">*</span></label>
-                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
-                
-                
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha"><br>
                 <label for="confirmar-senha">Confirmar Senha: <span style="color: red;">*</span></label>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Confirme sua senha">
-                
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required placeholder="Confirme sua senha"><br>
                 <label for="telefone">Telefone:</label>
                 <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX"><br>
                 <label for="data-nascimento">Data de Nascimento:</label>
                 <input type="date" id="data-nascimento" name="data-nascimento" required><br>
-
+            
                 <button type="submit">Registrar</button>
-                <script>
-                    function togglePassword(inputId) {
-                      const inputField = document.getElementById(inputId);
-                      const toggleText = inputField.nextElementSibling;
-                  
-                      if (inputField.type === "password") {
-                        inputField.type = "text";
-                        toggleText.textContent = "Ocultar";
-                      } else {
-                        inputField.type = "password";
-                        toggleText.textContent = "Mostrar";
-                      }
-                    }
-                  </script>
             </form>
+            
         </div>
     </div>
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            const senha = document.getElementById("senha").value;
+            const confirmarSenha = document.getElementById("confirmar-senha").value;
+            if (senha !== confirmarSenha) {
+                event.preventDefault();
+                alert("As senhas não coincidem.");
+            }
+        });
+    </script>
 </body>
 </html>

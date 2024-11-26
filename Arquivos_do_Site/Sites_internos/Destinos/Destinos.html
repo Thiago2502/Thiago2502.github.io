@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Camp.css">
+    <title>Destinos</title>
+</head>
+<body>
+    <h1>        
+        <div class="logo-container">
+            <img src="../../Imagens/Logo/Captura de tela 2024-11-24 173549.png" alt="Logo Rota Campinas" class="logo">
+        </div>
+    </h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="../../../index.html">Início</a></li>
+            <li><a href="../Destinos/Destinos.html">Destinos</a></li>
+            <li><a href="../Sobre/Sobre.html">Sobre</a></li>
+            <li><a href="../Contatos/Contatos.html">Contato</a></li>
+            <li><a href="../Login/Login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="destinos-lista">
+            <h2>Destinos Cadastrados</h2>
+            <ul id="destinos-lista">
+                <!-- Destinos serão carregados aqui -->
+            </ul>
+        </div>
+
+        <!-- Formulário para adicionar novos lugares -->
+        <div class="formulario-destino">
+            <h2>Adicionar Novo Destino</h2>
+            <form action="/adicionar-lugar" method="POST">
+                <label for="nome">Nome do Destino:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do destino"><br>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required placeholder="Descrição do destino"></textarea><br>
+
+                <label for="avaliacao">Avaliação (1 a 5):</label>
+                <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" required><br>
+
+                <button type="submit">Adicionar Destino</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os destinos no frontend
+        fetch('/destinos')
+            .then(response => response.json())
+            .then(destinos => {
+                const listaDestinos = document.getElementById('destinos-lista');
+                destinos.forEach(destino => {
+                    const item = document.createElement('li');
+                    item.innerHTML = `
+                        <strong>${destino.nome}</strong> <br>
+                        ${destino.descricao} <br>
+                        Avaliação: ${destino.avaliacao} <br>
+                        Criado em: ${destino.criado_em} <br><br>
+                    `;
+                    listaDestinos.appendChild(item);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar destinos:', error));
+    </script>
+</body>
+</html>
