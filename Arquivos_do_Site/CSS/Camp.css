@@ -169,6 +169,7 @@ button:hover {
 
 .noticia h4 {
   font-size: 20px;
+  font-family: Tahoma;
   margin-bottom: 10px; /* Adiciona espaço abaixo do título */
   color: #003cac; /* Cor de destaque para o título */
 }
