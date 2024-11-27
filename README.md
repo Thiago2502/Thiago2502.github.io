@@ -1,9 +1,10 @@
 Trabalho da materia de Desenv. Web em Html5, Css, Javascript Php.                                
-                                    
- https://www.figma.com/design/riXncxkqdh2f8IJ40CiMIb/Rota-Campinas?node-id=0-1&node-type=canvas&t=kLMRiYpxBAgPUD37-0                                          
+
+ Design do site (Atividade 2):                                   
+ www.figma.com/design/riXncxkqdh2f8IJ40CiMIb/Rota-Campinas?node-id=0-1&node-type=canvas&t=kLMRiYpxBAgPUD37-0                                          
                                   
                                                           
-                                        Rota Campinas
+Rota Campinas
 
 Funcionalidade:
 
@@ -12,11 +13,9 @@ Funcionalidade:
 
 O site de turismo local sobre a cidade de Campinas oferece uma plataforma interativa e útil para visitantes e moradores. Suas funcionalidades principais incluem:
 
-Notícias Locais: O site serve como uma plataforma de notícias atualizada sobre eventos, acontecimentos culturais e outras informações relevantes da cidade, mantendo os usuários bem informados sobre o que acontece em Campinas.
+Notícias Locais: O site oferece uma plataforma dinâmica de notícias locais, atualizadas frequentemente, com foco em eventos, acontecimentos culturais e informações relevantes de Campinas. Além disso, permite que a própria comunidade participe, publicando e compartilhando notícias, promovendo um ambiente colaborativo e garantindo que os usuários estejam sempre bem informados sobre o que acontece na cidade.
 
 Indicador de Locais Interessantes: Funciona como um guia turístico interativo, destacando pontos turísticos, restaurantes, atrações culturais e outros locais de interesse na cidade. Os usuários podem explorar uma lista completa de atrações com descrições detalhadas e informações úteis.
-
-Sistema de Avaliação: Os usuários podem avaliar os locais turísticos, proporcionando feedback sobre a qualidade das atrações e ajudando outros visitantes a tomar decisões mais informadas. Este sistema de avaliação facilita a escolha de atividades e pontos turísticos populares ou recomendados por outros usuários.
 
 Recomendações Personalizadas: O site oferece um sistema de recomendações baseado nas avaliações e nos locais visitados pelos usuários. A plataforma sugere novas atrações e atividades com base nos gostos pessoais de cada visitante, criando uma experiência de navegação mais personalizada.
 
